@@ -1,4 +1,5 @@
-# Import function to ~/.bash_functions and source to enable. generate_init.py must be in $PATH!
+# Import function to ~/.bash_functions and source to enable.
+# Remember to change /PATH_TO/ to where you've stored the python file
 #
 # Copies python __init__ variables to clipboard "pyinit 'a, b, c' [2] [-p]"
 pyinit() {
@@ -35,17 +36,17 @@ pyinit() {
         echo -e "$RE"
         return 0
     elif [[ " ${2} " =~ " -p " ]]; then
-        python3 /home/vexy/development/github.com/GitVexy/learn-oop/generate_init.py "$1" "-p" | xclip -selection clipboard
+        python3 /PATH_TO/generate_init.py "$1" "-p" | xclip -selection clipboard
         echo "Copied to clipboard: $1 with default (2) tabs (private)"
     elif [ -n "$2" ] && [ ! -n "$3" ]; then
-        python3 /home/vexy/development/github.com/GitVexy/learn-oop/generate_init.py "$1" "$2" | xclip -selection clipboard
+        python3 /PATH_TO/generate_init.py "$1" "$2" | xclip -selection clipboard
         echo "Copied to clipboard: $1 with $2 tabs"
     # Check if "-p" is in the arguments
     elif [[ " ${3} " =~ " -p " ]]; then
-        python3 /home/vexy/development/github.com/GitVexy/learn-oop/generate_init.py "$1" "$2" "-p" | xclip -selection clipboard
+        python3 /PATH_TO/generate_init.py "$1" "$2" "-p" | xclip -selection clipboard
         echo "Copied to clipboard: $1 with $2 tabs (private)"
     else
-        python3 /home/vexy/development/github.com/GitVexy/learn-oop/generate_init.py "$1" | xclip -selection clipboard
+        python3 /PATH_TO/generate_init.py "$1" | xclip -selection clipboard
         echo "Copied to clipboard: $1"
     fi
 }
