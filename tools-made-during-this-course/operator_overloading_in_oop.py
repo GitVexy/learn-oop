@@ -149,3 +149,40 @@ def main():
     print(f"Running abs(a) = {abs(a).get_value()}")
 
 main()
+
+""" 
+Outputs:
+
+--------------------------------------------
+
+Starting evaluation
+
+a = 5
+b = 2
+
+Arithmatic operators:
+Addition            5  +   2  =  7
+Subtraction         5  -   2  =  3
+Multiplication      5  *   2  =  10
+Power               5  **  2  =  25
+Division            5  /   2  =  2.5
+Floor Division      5  //  2  =  2
+Remainder (modulo)  5  %   2  =  1
+
+Bitwise:
+Bitwise Left Shift    101  <<    10  =  10100    (decimal: 20)
+Bitwise Right Shift   101  >>    10  =      1    (decimal: 1 )
+Bitwise AND           101  &     10  =      0    (decimal: 0 )  
+Bitwise OR            101  |     10  =    111    (decimal: 7 )
+Bitwise XOR           101  ^     10  =    111    (decimal: 7 )  
+Bitwise NOT                ~    101  =   b110    (decimal: -6)
+
+a = -5
+b = 5
+
+Unary operators:
+
+Running +(a) = -5
+Running -(b) = -5
+Running abs(a) = 5
+"""
